@@ -24,6 +24,13 @@ gulp.task('default', function() {
   // place code for your default task here
 });
 
+//added 5/17/16
+var gulp = require('gulp');
+
+gulp.task('default', function() {
+  // place code for your default task here
+});
+
 
 // Include Gulp & Tools We'll Use
 var gulp = require('gulp');

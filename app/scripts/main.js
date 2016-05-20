@@ -211,15 +211,15 @@
       else {
         params = { video: { optional: [{sourceId: videoSource.id}] } };
       }
-  
+
       gUM.call(navigator, params, function(theStream) {
         localStream = theStream;
         
         cameraVideo.onloadeddata = function(e) {
 
           coordinatesHaveChanged = true;
-          
           var isSetup = setupVariables(e);
+
           if(isSetup) {
             setInterval(captureFrame.bind(self), 4);
           }

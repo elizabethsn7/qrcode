@@ -6,7 +6,7 @@ var QRClient = function() {
     try {
       var width = imageData.width;
       var height = imageData.height;
-      var result = qrcode.decode(width, height, imageData);
+      var result = (width, height, imageData);
       callback(result);
     } 
     catch(e) {

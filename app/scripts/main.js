@@ -19,6 +19,7 @@
 (function() {
   'use strict';
 
+  var webWorker = new Worker('scripts/qrworker.js')
   var QRCodeCamera = function(element) {
     // Controls the Camera and the QRCode Module
 
@@ -55,6 +56,7 @@
 
     this.detectQRCode = function(imageData, callback) {
       callback = callback || function() {};
+      webWorker.postMessage('data');
 
       client.decode(imageData, function(result) {
         if(result !== undefined) {
